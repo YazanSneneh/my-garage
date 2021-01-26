@@ -13,15 +13,16 @@ header{
 main{
     background-image: url('../images/background.jpg');
     padding: 50px 0;
-    position: relative;
+    
 }
 
 section {
-  position: absolute;
-  top : 200px;
+    position: relative;
+    top : 50px;
+    display: inline-block;
 }
 #collect-data{
-    left: 100px;
+    left: 10px;
 }
 form{
     background-color: #a3a3a3;
@@ -42,9 +43,9 @@ form{
 /* .......................... data rendered  */
 #renderContainer{
     background-color: #4a4a4a;
-    right: 100px;
     padding: 100px;
-    width: 500px;
+    width: 400px;
+    left: 200px;
 }
 article{
     background-color: #eee;
