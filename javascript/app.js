@@ -1,15 +1,12 @@
 'use strict';
 
-// variable declarations 
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> variable declarations 
 var form = document.getElementById('form');
 var renderContainer = document.getElementById('renderContainer');
 var carsArray = [];
-/*
- As a user, I would like to view all of my cars that I already added so that I can quickly view my cars in my garage. 
- - Whenever you add a car using the form, you should use the local storage in order to get all the cars from it and render them  using DOM.
-   
- */
+var clear = document.getElementById('clear')
 
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> data model
 function Car(name, category, model) {
     this.name = name;
     this.category = category;
@@ -37,7 +34,7 @@ Car.prototype.renderCar = function () {
     renderContainer.append(carContainer)
 }
 
-// functions declerations 
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> functions declerations 
 function getCarFromUser(event) {
     event.preventDefault();
 
@@ -79,7 +76,10 @@ function carsStorage() {
         }
     }
 }
-// executable code 
+function clearLocalStorage() {
+    localStorage.clear()
+}
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> executable code 
 form.addEventListener('submit', getCarFromUser);
-
-carsStorage()
+clear.addEventListener('click', clearLocalStorage);
+carsStorage();

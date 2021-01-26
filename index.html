@@ -7,6 +7,9 @@
     <title>My Car Garage</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -14,12 +17,12 @@
         <h1>My Car Garage</h1>
     </header>
     <main>
-        <section>
+        <section id='collect-data'>
             <form id='form'>
-                <label for=""> Car Name</label>
-                <input type="text" name="name" id="">
+                <label for=""> Car Name</label><br>
+                <input type="text" name="name" id=""><br>
 
-                <label for=""> Category Model</label>
+                <label for=""> Category Model</label> <br>
                 <select name="category" id="">
                     <option value="bmw">bmw</option>
                     <option value="lexus">lexus</option>
@@ -28,8 +31,8 @@
                     <option value="chevrolet">Chevrolet</option>
                     <option value="hyundai">Hyundai</option>
                     <option value="kia">KIA</option>
-                </select>
-                <label for=""> Model Year</label>
+                </select> <br>
+                <label for=""> Model Year</label> <br>
                 <select name="model" id="">
                     <option value="2015">2015</option>
                     <option value="2016">2016</option>
@@ -38,13 +41,14 @@
                     <option value="2019">2019</option>
                     <option value="2020">2020</option>
                 </select>
-
-                <input type="submit">
+                <br>
+                <input id='btn' type="submit">
             </form>
         </section>
         <section id="renderContainer">
 
         </section>
+        <button id='clear'> Clear Local Storage</button>
     </main>
     <footer>
 
